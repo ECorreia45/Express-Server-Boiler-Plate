@@ -4,7 +4,7 @@
   "description": "This is a simple setup with examples on how to use ExpressJs to serve a website, files, and a simple api",
   "main": "\"",
   "scripts": {
-    "start": "npm run server"
+    "start": "npm run ./server"
   },
   "keywords": [
     "expressjs",
@@ -15,5 +15,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "babel-env": "^2.4.1",
+    "babel-register": "^6.26.0"
   }
 }
