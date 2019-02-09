@@ -18,6 +18,8 @@
   },
   "devDependencies": {
     "babel-env": "^2.4.1",
-    "babel-register": "^6.26.0"
+    "babel-register": "^6.26.0",
+    "cookie-parser": "^1.4.3",
+    "jade": "^1.11.0"
   }
 }
