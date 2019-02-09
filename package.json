@@ -1,0 +1,19 @@
+{
+  "name": "expressjsserver",
+  "version": "0.0.0",
+  "description": "This is a simple setup with examples on how to use ExpressJs to serve a website, files, and a simple api",
+  "main": "\"",
+  "scripts": {
+    "start": "npm run server"
+  },
+  "keywords": [
+    "expressjs",
+    "node",
+    "server"
+  ],
+  "author": "Elson Correia",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
