@@ -16,6 +16,7 @@
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "express": "^4.16.4",
+    "http-errors": "^1.7.1",
     "jade": "^1.11.0"
   },
   "devDependencies": {
