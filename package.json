@@ -4,7 +4,7 @@
   "description": "This is a simple setup with examples on how to use ExpressJs to serve a website, files, and a simple api",
   "main": "\"",
   "scripts": {
-    "start": "npm run ./server"
+    "start": "nodemon server"
   },
   "keywords": [
     "expressjs",
@@ -14,12 +14,12 @@
   "author": "Elson Correia",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "jade": "^1.11.0"
   },
   "devDependencies": {
     "babel-env": "^2.4.1",
-    "babel-register": "^6.26.0",
-    "cookie-parser": "^1.4.3",
-    "jade": "^1.11.0"
+    "babel-register": "^6.26.0"
   }
 }
