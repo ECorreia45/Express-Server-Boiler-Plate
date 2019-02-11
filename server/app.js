@@ -3,7 +3,9 @@ import express from 'express';
 import helmet from 'helmet';
 import createHTTPError from 'http-errors';
 import cookieParser from 'cookie-parser';
-import sassMiddleware from 'node-sass-middleware';
+import sass from 'node-sass-middleware';
+import postCSS from 'postcss-middleware';
+import options from './middlewareOptions';
 // routes
 import siteRoutes from './routes/main-site';
 import apiRoutes from './routes/api';
@@ -22,12 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // paths
 app.use(siteRoutes);
-app.use('/stylesheets', sassMiddleware({
-  src: path.resolve(__dirname, '../sass'),
-  dest: path.resolve(__dirname, '../public/stylesheets'),
-  indentedSyntax: false,
-  sourceMap: true,
-}));
+app.use('/stylesheets', sass(options.sass), postCSS(options.postCSS));
 app.use('/api', apiRoutes);
 app.use(express.static(path.resolve(__dirname, '../public')));
 
@@ -38,7 +35,7 @@ app.use((req, res, next) => {
 
 // handle unknown paths for api and website
 app.use((error, req, res, next) => {
-  const isAnAPIEndpoint = /^\/api\/v(\d+\.?)+/i.test(req.url);
+  const isAnAPIEndpoint = /^\/api\/v(\d+\.?)+/i.test(req.path);
 
   res.status(error.status || 500);
 

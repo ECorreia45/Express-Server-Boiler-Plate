@@ -1,0 +1,11 @@
+:root {
+  --mainColor: #12345678; }
+
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: var(--mainColor); }
+
+input::placeholder {
+  color: #ddd; }

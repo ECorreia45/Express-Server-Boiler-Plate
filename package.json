@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "serve": "nodemon server",
-    "local": "webpack --watch",
+    "compile": "webpack --watch",
     "build": "NODE_ENV=production webpack"
   },
   "keywords": [
@@ -18,12 +18,15 @@
   "dependencies": {
     "@babel/preset-env": "^7.3.1",
     "@babel/register": "^7.0.0",
+    "autoprefixer": "^9.4.7",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.4",
     "helmet": "^3.15.1",
     "http-errors": "^1.7.1",
     "jade": "^1.11.0",
-    "node-sass-middleware": "^0.11.0"
+    "node-sass-middleware": "^0.11.0",
+    "postcss-middleware": "^1.1.4",
+    "postcss-preset-env": "^6.5.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
