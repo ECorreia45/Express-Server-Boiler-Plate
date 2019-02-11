@@ -2,9 +2,11 @@
   "name": "expressjsserver",
   "version": "0.0.0",
   "description": "This is a simple setup with examples on how to use ExpressJs to serve a website, files, and a simple api",
-  "main": "\"",
+  "main": "src/app.js",
   "scripts": {
-    "start": "nodemon server"
+    "serve": "nodemon server",
+    "local": "webpack --watch",
+    "build": "NODE_ENV=production webpack"
   },
   "keywords": [
     "expressjs",
@@ -14,13 +16,25 @@
   "author": "Elson Correia",
   "license": "ISC",
   "dependencies": {
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.4",
+    "helmet": "^3.15.1",
     "http-errors": "^1.7.1",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "node-sass-middleware": "^0.11.0"
   },
   "devDependencies": {
-    "babel-env": "^2.4.1",
-    "babel-register": "^6.26.0"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
   }
 }
