@@ -1,6 +1,9 @@
 import path from 'path';
 import autoPreFixer from 'autoprefixer';
 import postCSSPresetEnv from 'postcss-preset-env';
+import cssnano from 'cssnano';
+
+const mode = process.env.NODE_ENV || 'development';
 
 export default {
   sass: {
@@ -22,6 +25,7 @@ export default {
           'not dead',
         ],
       }),
+      mode === 'production' ? cssnano({ preset: 'default' }) : {},
     ],
   },
 };

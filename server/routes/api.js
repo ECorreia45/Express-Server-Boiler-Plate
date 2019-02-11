@@ -1,6 +1,7 @@
 import express from 'express';
-const router = express.Router();
 import users from './api-endpoints/users';
+
+const router = express.Router();
 
 router.get('/', (req, res) => {
   res.json({
@@ -9,8 +10,8 @@ router.get('/', (req, res) => {
     supportedVersions: ['1'],
     description: '',
     documentationUrl: '',
-    basePath: '/api/v1'
-  })
+    basePath: '/api/v1',
+  });
 });
 
 router.get('/v1', (req, res) => {
@@ -19,15 +20,15 @@ router.get('/v1', (req, res) => {
       {
         path: '/users',
         requestTypes: ['GET'],
-        documentationUrl: ''
+        documentationUrl: '',
       },
       {
         path: '/user(/:userId)',
         requestTypes: ['GET', 'POST'],
-        documentationUrl: ''
-      }
-    ]
-  })
+        documentationUrl: '',
+      },
+    ],
+  });
 });
 
 users(router);
