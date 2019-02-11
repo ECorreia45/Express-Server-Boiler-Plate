@@ -81,20 +81,20 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/signup.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/app.js":
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
+/***/ "./src/signup.js":
+/*!***********************!*\
+  !*** ./src/signup.js ***!
+  \***********************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_add__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/add */ \"./src/utils/add.js\");\n\nconsole.log('-- app', Object(_utils_add__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(1)(9));\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_add__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/add */ \"./src/utils/add.js\");\n\nconsole.log('-- signup', Object(_utils_add__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(1)(9));\n\n//# sourceURL=webpack:///./src/signup.js?");
 
 /***/ }),
 

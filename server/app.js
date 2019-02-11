@@ -16,18 +16,18 @@ app.set('view engine', 'jade');
 
 // configs/middleware
 app.use(helmet());
+app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+
+// paths
+app.use(siteRoutes);
 app.use('/stylesheets', sassMiddleware({
   src: path.resolve(__dirname, '../sass'),
   dest: path.resolve(__dirname, '../public/stylesheets'),
   indentedSyntax: false,
   sourceMap: true,
 }));
-
-// paths
-app.use(siteRoutes);
 app.use('/api', apiRoutes);
 app.use(express.static(path.resolve(__dirname, '../public')));
 

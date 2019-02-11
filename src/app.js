@@ -1,5 +1,3 @@
-import Test from './CLS';
+import add from './utils/add';
 
-const test = new Test();
-
-console.log('is checked:', test.check());
+console.log('-- app', add(1)(9));

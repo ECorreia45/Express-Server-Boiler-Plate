@@ -3,9 +3,14 @@ const path = require('path');
 const mode = process.env.NODE_ENV || 'development';
 
 module.exports = {
-  entry: './src/app.js',
+  entry: {
+    app: './src/app.js',
+    login: './src/login.js',
+    signup: './src/signup.js',
+    register: './src/register.js',
+  },
   output: {
-    filename: 'app.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'public/javascript'),
   },
   mode,
