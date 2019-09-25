@@ -2,9 +2,12 @@
   "name": "expressjsserver",
   "version": "0.0.0",
   "description": "This is a simple setup with examples on how to use ExpressJs to serve a website, files, and a simple api",
-  "main": "\"",
+  "main": "src/app.js",
   "scripts": {
-    "start": "npm run server"
+    "start": "NODE_ENV=production node server",
+    "local": "nodemon server",
+    "compile": "webpack --watch",
+    "build": "NODE_ENV=production webpack --progress --config webpack.config.js"
   },
   "keywords": [
     "expressjs",
@@ -14,6 +17,35 @@
   "author": "Elson Correia",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "autoprefixer": "^9.4.7",
+    "cookie-parser": "^1.4.3",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.8",
+    "express": "^4.16.4",
+    "helmet": "^3.15.1",
+    "http-errors": "^1.7.1",
+    "jade": "^1.11.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "node-sass-middleware": "^0.11.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-middleware": "^1.1.4",
+    "postcss-preset-env": "^6.5.0",
+    "postcss-scss": "^2.0.0",
+    "sass-loader": "^8.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
   }
 }
